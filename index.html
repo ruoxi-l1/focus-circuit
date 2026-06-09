@@ -1,28 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Focus Circuit</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <nav>
+  <div class="container">
+
     <h1>Focus Circuit</h1>
-  </nav>
 
-  <section class="hero">
-    <h2>Built for the way modern minds learn</h2>
-    <p>Neuroscience-inspired study system with an F1 focus experience.</p>
-    <button>Start Focus</button>
-  </section>
+    <!-- CONTROLS -->
+    <div class="panel">
 
-  <section class="cards">
-    <div class="card">Focus Circuit</div>
-    <div class="card">Learning Space</div>
-    <div class="card">Planner</div>
-  </section>
+      <label>Focus Time (minutes)</label>
+      <input id="timeInput" type="number" value="25" min="1">
+
+      <label>Lap Interval (minutes per lap)</label>
+      <input id="lapInput" type="number" value="5" min="1">
+
+      <button onclick="startSession()">Start Session</button>
+      <button onclick="resetSession()">Reset</button>
+
+    </div>
+
+    <!-- STATUS -->
+    <div class="status">
+
+      <h2 id="timer">00:00</h2>
+      <p>Laps Completed: <span id="laps">0</span></p>
+
+      <div class="bar">
+        <div id="progress"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
-<link rel="stylesheet" href="style.css">
